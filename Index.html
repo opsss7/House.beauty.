@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FCFAF8">
+<title>HOUSEE.BEAUTY — ماڵێک لە جوانی</title>
+<meta name="description" content="HOUSEE.BEAUTY — فرۆشگای کەلوپەلی ماڵ و ڕازاندنەوە لە سلێمانی. کاتژمێر، ئاوێنە، و دیزاینی ناوماڵ. داواکاری بە واتساپ.">
+<meta property="og:title" content="HOUSEE.BEAUTY — ماڵێک لە جوانی">
+<meta property="og:description" content="بەرهەمی ماڵ و ڕازاندنەوە لە سلێمانی. داواکاری بە واتساپ.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#FCFAF8;
+  --surface:#FFFFFF;
+  --ink:#1A1817;
+  --ink2:#4A423B;
+  --muted:#8A8078;
+  --line:#EAE2D9;
+  --line2:#F4EFE9;
+  --accent:#C69C6D; /* Soft Gold / Champagne */
+  --accent-dk:#A87F51;
+  --blush:#F7F3EE;
+  --cream:#FEFCFA;
+  --green:#2E7D5B;
+
+  --r-xl:26px;
+  --r-lg:20px;
+  --r-md:14px;
+  ---fontr-sm:10px;
+
+  --maxw:-s1220px;
+mo  --nav-hothing:gra:64px;
+
+  --shadow-sm:0 1px 2px rgba(26,24,23,.04);
+  --shadow-md:0 18px 44px -24px rgba(26,24,23,.15);
+  --shadow-lg:0 30px 70px -30px rgba(26,24,23,.25);
+
+  --font-display:'Noto Kufi Arabic','Playfair Display',system-ui,sans-serif;
+  --font-body:'Noto Naskh Arabic','Noto Kufi Arabic',system-ui,sans-serif;
+  --font-latin:'Playfair Display',Georgia,serif;
+}
+html[dir="ltr"]{
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-body);font-size:16px;line-height:1.8;
+  -webkit-font-smoothing:antialiased;-moz-osxyscale;
+  overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+input{font:inherit}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.45;margin:0;letter-spacing:-.01em}
+p{margin:0}
+ul{margin:0;padding:0;list-style:none}
+::selection{background:var(--accent);color:#fff}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 14px)}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:13px 24px;border-radius:999px;font-family:var(--font-display);
+  font-size:14.5px;font-weight:600;letter-spacing:.01em;
+  transition:transform .22s cubic-bezier(.22,.9,.3,1),background .22s,color .22s,border-color .22s,box-shadow .22s;
+  white-space:nowrap;line-height:1;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--ink);color:#FBF6F1;box-shadow:var(--shadow-sm)}
+.btn-primary:hover{background:#2C2620;box-shadow:var(--shadow-md)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--accent-dk)}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--ink);background:rgba(26,24,23,.03)}
+.btn-light{background:rgba(255,255,255,.94);color:var(--ink);backdrop-filter:blur(8px)}
+.btn-light:hover{background:#fff}
+.btn-outline-light{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(8px)}
+.btn-outline-light:hover{background:rgba(255,255,255,.16)}
+.btn-block{width:100%}
+.btn-sm{padding:10px 16px;font-size:13.5px}
+.btn svg{width:17px;height:17px;flex:none}
+
+/* ============ HEADER ============ */
+.topbar{
+  background:var(--ink);color:#E9E0D8;font-size:12.5px;
+  font-family:var(--font-display);font-weight:400;
+  padding:8px 0;text-align:center;letter-spacing:.01em;
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.topbar b{font-weight:600;color:#fff}
+.topbar .dot{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,.35)}
+
+.hdr{
+  position:sticky;top:0;z-index:70;
+  background:rgba(252,250,248,.86);
+  backdrop-filter:saturate(180%) blur(16px);
+  -webkit-backdrop-filter:saturate(180%) blur(16px);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s,box-shadow .3s;
+}
+.hdr.scrolled{border-bottom-color:var(--line);box-shadow:0 8px 30px -26px rgba(26,24,23,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:var(--nav-h)}
+@media(min-width:900px){:root{--nav-h:78px}}
+
+.logo{display:flex;align-items:center;gap:10px;flex:none}
+.logo-mark{
+  width:36px;height:36px;border-radius:11px;flex:none;
+  background:linear-gradient(150deg,#1F1B16,#3B322A);
+  color:#F3E7DC;display:grid;place-items:center;
+  font-family:var(--font-latin);font-size:16px;font-weight:600;letter-spacing:.02em;
+}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text strong{
+  font-family:var(--font-latin);font-size:15.5px;font-weight:600;letter-spacing:.06em;color:var(--ink);
+}
+.logo-text strong i{color:var(--accent);font-style:normal}
+.logo-text em{
+  font-style:normal;font-family:var(--font-display);font-size:9.5px;font-weight:400;
+  color:var(--muted);letter-spacing:.02em;margin-top:3px;
+}
+@media(max-width:520px){.logo-text em{display:none}}
+
+.nav-links{display:none;align-items:center;gap:2px}
+@media(min-width:900px){.nav-links{display:flex}}
+.nav-links a{
+  position:relative;padding:9px 13px;border-radius:999px;
+  font-family:var(--font-display);font-size:14px;font-weight:500;color:var(--ink2);
+  transition:color .2s,background .2s;
+}
+.nav-links a:hover{color:var(--ink);background:rgba(26,24,23,.045)}
+.nav-links a.active{color:var(--ink);font-weight:600}
+.nav-links a.active::after{
+  content:"";position:absolute;bottom:2px;inset-inline:13px;height:2px;border-radius:2px;background:var(--accent);
+}
+
+.nav-right{display:flex;align-items:center;gap:8px;flex:none}
+.lang-btn{
+  display:none;align-items:center;gap:5px;padding:8px 12px;border-radius:999px;
+  border:1px solid var(--line);font-family:var(--font-display);font-size:12.5px;font-weight:600;color:var(--ink2);
+  transition:border-color .2s,color .2s;
+}
+@media(min-width:640px){.lang-btn{display:inline-flex}}
+.lang-btn:hover{border-color:var(--ink);color:var(--ink)}
+.nav-order{display:none}
+@media(min-width:900px){.nav-order{display:inline-flex}}
+
+.burger{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  border:1px solid var(--line);background:var(--surface);transition:border-color .2s;
+}
+@media(min-width:900px){.burger{display:none}}
+.burger:hover{border-color:var(--ink)}
+.burger span{display:block;width:17px;height:1.6px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s}
+.burger span+span{margin-top:4.5px}
+.burger.on span:nth-child(1){transform:translateY(6.1px) rotate(45deg)}
+.burger.on span:nth-child(2){opacity:0}
+.burger.on span:nth-child(3){transform:translateY(-6.1px) rotate(-45deg)}
+
+/* mobile drawer */
+.drawer{
+  position:fixed;inset:0;z-index:65;background:var(--bg);
+  padding:calc(var(--nav-h) + 26px) 24px 40px;
+  transform:translateY(-100%);opacity:0;visibility:hidden;
+  transition:transform .42s cubic-bezier(.22,.9,.3,1),opacity .3s,visibility .42s;
+  overflow-y:auto;
+}
+.drawer.open{transform:none;opacity:1;visibility:visible}
+.drawer nav{display:flex;flex-direction:column;gap:2px;margin-bottom:26px}
+.drawer nav a{
+  font-family:var(--font-display);font-size:22px;font-weight:600;padding:14px 4px;
+  border-bottom:1px solid var(--line2);display:flex;align-items:center;justify-content:space-between;
+  opacity:0;transform:translateY(10px);transition:opacity .4s,transform .4s;
+}
+.drawer.open nav a{opacity:1;transform:none}
+.drawer.open nav a:nth-child(1){transition-delay:.06s}
+.drawer.open nav a:nth-child(2){transition-delay:.10s}
+.drawer.open nav a:nth-child(3){transition-delay:.14s}
+.drawer.open nav a:nth-child(4){transition-delay:.18s}
+.drawer.open nav a:nth-child(5){transition-delay:.22s}
+.drawer.open nav a:nth-child(6){transition-delay:.26s}
+.drawer nav a span{color:var(--muted);font-size:13px;font-family:var(--font-body)}
+.drawer-contact{display:flex;flex-direction:column;gap:12px}
+.drawer-contact a{
+  display:flex;align-items:center;gap:11px;padding:14px 16px;border-radius:var(--r-md);
+  background:var(--surface);border:1px solid var(--line);font-size:14px;
+}
+.drawer-contact a svg{width:18px;height:18px;color:var(--accent);flex:none}
+
+/* ============ HERO ============ */
+.hero{position:relative;min-height:min(88svh,700px);display:flex;align-items:flex-end;overflow:hidden;background:#221C17}
+.hero-img{position:absolute;inset:0}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:center 42%;animation:heroZoom 16s ease-out forwards}
+@keyframes heroZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+.hero-img::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(to top,rgba(19,15,12,.88) 0%,rgba(19,15,12,.60) 32%,rgba(19,15,12,.18) 62%,rgba(19,15,12,.30) 100%);
+}
+.hero-inner{position:relative;z-index:2;width:100%;padding-block:44px 48px}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-family:var(--font-display);font-size:11.5px;font-weight:500;letter-spacing:.13em;
+  text-transform:uppercase;color:rgba(255,255,255,.82);
+  padding:7px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.07);backdrop-filter:blur(6px);
+  margin-bottom:22px;
+}
+.hero-eyebrow .dot{width:5px;height:5px;border-radius:50%;background:var(--accent);flex:none}
+.hero h1{
+  color:#fff;font-size:clamp(2.5rem,10.5vw,4.6rem);font-weight:700;line-height:1.24;
+  letter-spacing:-.015em;margin-bottom:16px;text-shadow:0 2px 30px rgba(0,0,0,.28);
+}
+.hero h1 .accent{color:#E8C9B2}
+.hero p{
+  color:rgba(255,255,255,.86);font-size:clamp(14.5px,3.9vw,17px);
+  max-width:520px;line-height:1.95;margin-bottom:30px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px}
+.hero-actions .btn{padding:15px 28px;font-size:15px}
+@media(max-width:400px){.hero-actions .btn{flex:1 1 100%}}
+
+.hero-meta{
+  position:absolute;top:calc(var(--nav-h) + 20px);inset-inline-end:20px;z-index:3;
+  display:none;flex-direction:column;gap:9px;align-items:flex-end;
+}
+@media(min-width:1024px){.hero-meta{display:flex}}
+.hero-meta span{
+  font-family:var(--font-display);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.75);writing-mode:vertical-rl;
+}
+
+/* ============ SECTION HEADS ============ */
+.sec{padding-block:clamp(58px,11vw,104px)}
+.sec-head{margin-bottom:clamp(26px,5vw,42px);max-width:660px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-size:11px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);margin-bottom:13px;
+}
+.eyebrow::before{content:"";width:20px;height:1px;background:var(--accent);opacity:.6}
+.sec-head.center .eyebrow::after{content:"";width:20px;height:1px;background:var(--accent);opacity:.6}
+.sec-title{font-size:clamp(1.65rem,6vw,2.6rem);font-weight:700;letter-spacing:-.015em;line-height:1.35}
+.sec-sub{color:var(--muted);font-size:clamp(14px,3.7vw,16px);margin-top:11px;line-height:1.9}
+
+.sec-head-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap}
+
+/* ============ CATEGORIES ============ */
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.cat-grid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:1024px){.cat-grid{grid-template-columns:repeat(6,1fr);gap:14px}}
+.cat{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;
+  background:linear-gradient(150deg,#F3EBE4,#E8DDD3);cursor:pointer;display:block;
+  transition:transform .38s cubic-bezier(.22,.9,.3,1),box-shadow .38s;
+}
+.cat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.cat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,.9,.3,1)}
+.cat:hover img{transform:scale(1.06)}
+.cat::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(19,15,12,.82) 0%,rgba(19,15,12,.34) 45%,rgba(19,15,12,.04) 78%);
+}
+.cat-label{position:absolute;inset-inline:0;bottom:0;z-index:2;padding:14px 13px 15px;color:#fff}
+.cat-label strong{display:block;font-family:var(--font-display);font-size:14px;font-weight:600;line-height:1.4}
+.cat-label span{display:block;font-size:11.5px;color:rgba(255,255,255,.68);margin-top:3px}
+@media(max-width:699px){.cat-label strong{font-size:13px}.cat-label span{font-size:10.5px}}
+
+/* ============ MEDIA / PRODUCT CARD ============ */
+.media{position:relative;overflow:hidden;background:linear-gradient(150deg,#F4ECE6,#EAE0D7);display:block}
+.media img{width:100%;height:100%;object-fit:cover;transition:transform .75s cubic-bezier(.22,.9,.3,1)}
+.media.no-img::after{
+  content:"H";position:absolute;inset:0;display:grid;place-items:center;
+  font-family:var(--font-latin);font-size:34px;color:rgba(198,156,109,.28);
+}
+
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:700px){.pgrid{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(min-width:1024px){.pgrid{grid-template-columns:repeat(4,1fr);gap:20px}}
+
+.pcard{
+  background:var(--surface);border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--line2);display:flex;flex-direction:column;
+  transition:transform .34s cubic-bezier(.22,.9,.3,1),box-shadow .34s,border-color .34s;
+}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--line)}
+.pcard .media{aspect-ratio:1/1;cursor:pointer}
+.pcard:hover .media img{transform:scale(1.05)}
+
+.pcard-badges{position:absolute;top:10px;inset-inline-start:10px;z-index:2;display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.badge{
+  font-family:var(--font-display);font-size:10.5px;font-weight:600;letter-spacing:.05em;
+  padding:5px 10px;border-radius:999px;background:var(--ink);color:#fff;line-height:1;
+}
+.badge.new{background:var(--accent)}
+.badge.sale{background:#8E3B3B}
+.stock{
+  position:absolute;top:10px;inset-inline-end:10px;z-index:2;
+  font-family:var(--font-display);font-size:10.5px;font-weight:500;
+  padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.94);
+  color:var(--green);line-height:1;backdrop-filter:blur(6px);
+}
+.stock.low{color:#B07A24}
+.stock.out{color:#9A9089}
+
+.pcard-body{padding:13px 13px 14px;display:flex;flex-direction:column;flex:1;gap:9px}
+@media(min-width:1024px){.pcard-body{padding:16px 16px 17px}}
+.pcard-name{
+  font-family:var(--font-display);font-size:14px;font-weight:600;line-height:1.55;
+  color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.9em;
+}
+@media(min-width:1024px){.pcard-name{font-size:14.5px}}
+.pcard-cat{font-size:11.5px;color:var(--muted);font-family:var(--font-display);margin-top:-4px}
+.price-row{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-top:auto}
+.price{font-family:var(--font-display);font-size:15.5px;font-weight:700;color:var(--ink);letter-spacing:-.01em}
+.price-old{font-size:12.5px;color:var(--muted);text-decoration:line-through}
+.pcard .btn-order{
+  width:100%;padding:11px 14px;font-size:13.5px;border-radius:12px;
+  background:var(--ink);color:#FBF6F1;font-family:var(--font-display);font-weight:600;
+  transition:background .22s,transform .18s;
+}
+.pcard .btn-order:hover{background:var(--accent)}
+.pcard .btn-order:active{transform:scale(.98)}
+.pcard .btn-order[disabled]{background:#EFE9E4;color:#A79E97;cursor:not-allowed}
+
+/* ============ HORIZONTAL SCROLL ============ */
+.hscroll{
+  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:4px 20px 22px;margin-inline:-20px;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.hscroll::-webkit-scrollbar{display:none}
+.hscroll>*{flex:0 0 66%;max-width:290px;scroll-snap-align:start}
+@media(min-width:640px){.hscroll>*{flex:0 0 40%}}
+@media(min-width:1024px){.hscroll{display:none}}
+
+.hscroll-desk{display:none}
+@media(min-width:1024px){.hscroll-desk{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}}
+
+/* ============ WHY ============ */
+.why-sec{background:var(--cream);border-block:1px solid var(--line2)}
+.why-grid{display:grid;gap:12px}
+@media(min-width:640px){.why-grid{grid-template-columns:repeat(2,1fr);gap:16px}}
+@media(min-width:1024px){.why-grid{grid-template-columns:repeat(4,1fr);gap:18px}}
+.why-card{
+  background:var(--surface);border:1px solid var(--line2);border-radius:var(--r-lg);
+  padding:24px 22px 26px;transition:transform .34s cubic-bezier(.22,.9,.3,1),box-shadow .34s;
+}
+.why-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+.why-ico{
+  width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
+  background:var(--blush);color:var(--accent);margin-bottom:16px;
+}
+.why-ico svg{width:22px;height:22px}
+.why-card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.why-card p{font-size:14px;color:var(--muted);line-height:1.9}
+
+/* ============ INSTAGRAM ============ */
+.insta-head{display:flex;align-items:center;gap:14px;margin-bottom:26px;flex-wrap:wrap}
+.insta-avatar{
+  width:56px;height:56px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:linear-gradient(140deg,#1F1B16,#3B322A);color:#F3E7DC;
+  font-family:var(--font-latin);font-size:20px;font-weight:600;
+  box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--accent);
+}
+.insta-meta strong{display:block;font-family:var(--font-display);font-size:16px;font-weight:600}
+.insta-meta span{font-size:13px;color:var(--muted)}
+.insta-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+@media(min-width:700px){.insta-grid{grid-template-columns:repeat(6,1fr);gap:10px}}
+.insta-item{
+  position:relative;aspect-ratio:1/1;border-radius:var(--r-md);overflow:hidden;display:block;
+  background:linear-gradient(150deg,#F4ECE6,#EAE0D7);
+}
+.insta-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.22,.9,.3,1)}
+.insta-item::after{
+  content:"";position:absolute;inset:0;background:rgba(19,15,12,.34);
+  opacity:0;transition:opacity .3s;
+}
+.insta-item svg{
+  position:absolute;inset:0;margin:auto;width:22px;height:22px;color:#fff;z-index:2;
+  opacity:0;transform:scale(.8);transition:opacity .3s,transform .3s;
+}
+.insta-item:hover img{transform:scale(1.07)}
+.insta-item:hover::after{opacity:1}
+.insta-item:hover svg{opacity:1;transform:none}
+
+/* ============ LOCATION ============ */
+.loc-grid{display:grid;gap:18px}
+@media(min-width:900px){.loc-grid{grid-template-columns:.85fr 1.15fr;gap:24px;align-items:stretch}}
+.loc-card{
+  background:var(--surface);border:1px solid var(--line2);border-radius:var(--r-xl);
+  padding:28px 24px;display:flex;flex-direction:column;gap:20px;
+}
+.loc-item{display:flex;gap:14px;align-items:flex-start}
+.loc-item .ico{
+  width:42px;height:42px;border-radius:13px;flex:none;display:grid;place-items:center;
+  background:var(--blush);color:var(--accent);
+}
+.loc-item .ico svg{width:19px;height:19px}
+.loc-item strong{display:block;font-family:var(--font-display);font-size:14.5px;font-weight:600;margin-bottom:2px}
+.loc-item span,.loc-item a{font-size:14px;color:var(--muted);line-height:1.75;display:block;direction:ltr;text-align:start}
+html[dir="rtl"] .loc-item a[href^="tel"]{direction:ltr;unicode-bidi:embed}
+.map-box{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;min-height:300px;
+  border:1px solid var(--line);background:linear-gradient(150deg,#F1E9E2,#E5DAD0);
+}
+@media(min-width:900px){.map-box{min-height:100%}}
+.map-box iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(.22) contrast(1.02)}
+.map-pin{
+  position:absolute;top:16px;inset-inline-start:16px;z-index:2;
+  background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+  border-radius:999px;padding:8px 15px;font-family:var(--font-display);
+  font-size:12.5px;font-weight:600;box-shadow:var(--shadow-sm);
+  display:flex;align-items:center;gap:7px;
+}
+.map-pin .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+
+/* ============ DELIVERY ============ */
+.delivery{background:var(--ink);color:#F3EDE7;border-radius:var(--r-xl);padding:clamp(30px,7vw,58px);position:relative;overflow:hidden}
+.delivery::before{
+  content:"";position:absolute;top:-110px;inset-inline-end:-90px;width:320px;height:320px;border-radius:50%;
+  background:radial-gradient(circle,rgba(198,156,109,.30),transparent 68%);
+}
+.delivery-inner{position:relative;z-index:1;display:grid;gap:30px}
+@media(min-width:900px){.delivery-inner{grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}}
+.delivery h2{font-size:clamp(1.6rem,5.6vw,2.4rem);font-weight:700;line-height:1.35;margin-bottom:14px}
+.delivery p{color:rgba(243,237,231,.72);font-size:15px;line-height:1.95;max-width:520px}
+.delivery .eyebrow{color:#D9AE8C}
+.delivery .eyebrow::before{background:#D9AE8C}
+.del-phone{
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.13);
+  border-radius:var(--r-lg);padding:24px 22px;display:flex;flex-direction:column;gap:16px;
+}
+.del-phone small{
+  font-family:var(--font-display);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:rgba(243,237,231,.5);
+}
+.del-phone a.num{
+  font-family:var(--font-latin);font-size:clamp(1.4rem,5.5vw,1.85rem);font-weight:500;
+  letter-spacing:.02em;color:#fff;direction:ltr;display:block;line-height:1.3;
+}
+.del-phone .btn{background:#fff;color:var(--ink)}
+.del-phone .btn:hover{background:#F0E6DD}
+.del-note{font-size:12.5px;color:rgba(243,237,231,.5);line-height:1.8}
+
+/* ============ FINAL CTA ============ */
+.final{
+  position:relative;text-align:center;padding-block:clamp(70px,14vw,130px);
+  background:linear-gradient(165deg,#FEFCFA,#F7F3EE);
+  border-top:1px solid var(--line2);
+}
+.final::before{
+  content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(680px,90vw);height:min(680px,90vw);border-radius:50%;
+  background:radial-gradient(circle,rgba(198,156,109,.10),transparent 66%);
+  pointer-events:none;
+}
+.final-inner{position:relative;z-index:1;max-width:640px;margin-inline:auto}
+.final h2{font-size:clamp(1.85rem,7.5vw,3.1rem);font-weight:700;line-height:1.34;letter-spacing:-.02em;margin-bottom:16px}
+.final p{color:var(--muted);font-size:clamp(14.5px,3.9vw,16.5px);margin-bottom:30px;line-height:1.9}
+.final .btn{padding:16px 34px;font-size:15.5px}
+
+/* ============ FOOTER ============ */
+footer{background:var(--bg);border-top:1px solid var(--line);padding-block:52px 34px}
+.foot-grid{display:grid;gap:34px;margin-bottom:40px}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr;gap:40px}}
+.foot-brand p{color:var(--muted);font-size:13.5px;line-height:1.95;margin-top:14px;max-width:330px}
+.foot-col h4{
+  font-family:var(--font-display);font-size:12px;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink);margin-bottom:16px;
+}
+.foot-col a,.foot-col span{display:block;font-size:14px;color:var(--muted);padding:5px 0;transition:color .2s}
+.foot-col a:hover{color:var(--ink)}
+.foot-col a[href^="tel"]{direction:ltr;text-align:start}
+.foot-bottom{
+  border-top:1px solid var(--line);padding-top:22px;display:flex;flex-wrap:wrap;
+  gap:12px;align-items:center;justify-content:space-between;
+  font-size:12.5px;color:var(--muted);
+}
+.foot-bottom .socials{display:flex;gap:8px}
+.foot-bottom .socials a{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  border:1px solid var(--line);transition:border-color .2s,background .2s,color .2s;
+}
+.foot-bottom .socials a:hover{border-color:var(--ink);background:var(--ink);color:#fff}
+.foot-bottom .socials svg{width:16px;height:16px}
+
+/* ============ FAB ============ */
+.fab{
+  position:fixed;bottom:calc(16px + env(safe-area-inset-bottom));left:16px;z-index:60;
+  display:inline-flex;align-items:center;gap:9px;
+  background:#25D366;color:#fff;padding:13px 19px 13px 16px;border-radius:999px;
+  font-family:var(--font-display);font-size:13.5px;font-weight:600;
+  box-shadow:0 14px 34px -12px rgba(37,211,102,.62),0 2px 8px rgba(0,0,0,.10);
+  transition:transform .28s cubic-bezier(.22,.9,.3,1),box-shadow .28s;
+}
+.fab:hover{transform:translateY(-3px)}
+.fab:active{transform:scale(.96)}
+.fab svg{width:20px;height:20px;flex:none}
+@media(min-width:900px){.fab{display:none}}
+
+/* ============ SEARCH & FILTER ============ */
+.shop-tools{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+.search-box{
+  position:relative;display:flex;align-items:center;
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;
+  padding:0 18px;height:50px;max-width:460px;transition:border-color .22s,box-shadow .22s;
+}
+.search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px rgba(198,156,109,.09)}
+.search-box svg{width:17px;height:17px;color:var(--muted);flex:none}
+.search-box input{
+  flex:1;border:0;background:none;outline:none;padding:0 12px;font-size:15px;color:var(--ink);
+  font-family:var(--font-body);min-width:0;
+}
+.search-box input::placeholder{color:#B5ACA4}
+.search-clear{
+  width:24px;height:24px;border-radius:50%;display:none;place-items:center;
+  background:var(--line2);color:var(--muted);flex:none;
+}
+.search-clear.on{display:grid}
+.search-clear svg{width:11px;height:11px}
+
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-inline:-20px;padding-inline:20px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{
+  flex:none;padding:9px 17px;border-radius:999px;border:1px solid var(--line);
+  background:var(--surface);font-family:var(--font-display);font-size:13px;font-weight:500;
+  color:var(--ink2);transition:all .22s;white-space:nowrap;
+}
+.chip:hover{border-color:var(--ink2)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#FBF6F1;font-weight:600}
+
+.results-line{
+  font-family:var(--font-display);font-size:12.5px;color:var(--muted);
+  margin-bottom:16px;letter-spacing:.02em;
+}
+.empty{
+  text-align:center;padding:60px 20px;border:1px dashed var(--line);border-radius:var(--r-xl);
+  background:var(--surface);
+}
+.empty svg{width:30px;height:30px;color:var(--muted);margin-inline:auto;margin-bottom:14px;opacity:.6}
+.empty p{color:var(--muted);font-size:14.5px}
+
+/* ============ PDP ============ */
+.pdp{position:fixed;inset:0;z-index:120;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.pdp.open{opacity:1;visibility:visible}
+.pdp-backdrop{position:absolute;inset:0;background:rgba(26,24,23,.5);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+.pdp-sheet{
+  position:absolute;inset:0;background:var(--bg);overflow-y:auto;-webkit-overflow-scrolling:touch;
+  transform:translateY(22px);transition:transform .42s cubic-bezier(.22,.9,.3,1);
+}
+.pdp.open .pdp-sheet{transform:none}
+@media(min-width:900px){
+  .pdp-sheet{inset:5vh 0;max-width:1080px;margin-inline:auto;border-radius:26px;overflow:hidden;overflow-y:auto}
+}
+.pdp-close{
+  position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:10px;
+  padding:14px 18px;background:rgba(252,250,248,.92);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line2);
+}
+.pdp-close button{
+  display:inline-flex;align-items:center;gap:8px;padding:9px 16px 9px 13px;border-radius:999px;
+  background:var(--surface);border:1px solid var(--line);
+  font-family:var(--font-display);font-size:13px;font-weight:600;
+  transition:border-color .2s;
+}
+.pdp-close button:hover{border-color:var(--ink)}
+.pdp-close svg{width:15px;height:15px}
+.pdp-body{padding:22px 20px 52px}
+@media(min-width:900px){.pdp-body{padding:34px 44px 56px}}
+.pdp-grid{display:grid;gap:26px}
+@media(min-width:900px){.pdp-grid{grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}}
+
+.pdp-gallery .main{
+  position:relative;border-radius:var(--r-xl);overflow:hidden;aspect-ratio:1/1;
+  background:linear-gradient(150deg,#F4ECE6,#EAE0D7);
+}
+.pdp-gallery .main img{width:100%;height:100%;object-fit:cover}
+.pdp-thumbs{display:flex;gap:9px;margin-top:11px}
+.pdp-thumbs button{
+  width:66px;height:66px;border-radius:var(--r-md);overflow:hidden;flex:none;
+  border:1.5px solid transparent;background:linear-gradient(150deg,#F4ECE6,#EAE0D7);
+  transition:border-color .22s,opacity .22s;opacity:.62;
+}
+.pdp-thumbs button.on{border-color:var(--accent);opacity:1}
+.pdp-thumbs img{width:100%;height:100%;object-fit:cover}
+
+.pdp-info h1{font-size:clamp(1.4rem,5.6vw,2.05rem);font-weight:700;line-height:1.4;margin-bottom:10px}
+.pdp-cat{
+  display:inline-block;font-family:var(--font-display);font-size:11px;font-weight:600;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;
+}
+.pdp-price{display:flex;align-items:baseline;gap:11px;flex-wrap:wrap;margin:16px 0 6px}
+.pdp-price .price{font-size:clamp(1.3rem,5vw,1.75rem);font-weight:700}
+.pdp-price .price-old{font-size:15px}
+.pdp-stock{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--font-display);
+  font-size:12.5px;font-weight:500;color:var(--green);margin-top:6px;
+}
+.pdp-stock .dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:none}
+.pdp-stock.low{color:#B07A24}
+.pdp-stock.out{color:#9A9089}
+.pdp-desc{
+  font-size:15px;color:var(--ink2);line-height:2;margin:20px 0 26px;
+  padding-top:20px;border-top:1px solid var(--line);
+}
+.pdp-actions{display:flex;flex-direction:column;gap:10px}
+@media(min-width:520px){.pdp-actions{flex-direction:row}}
+.pdp-actions .btn{flex:1;padding:16px 24px;font-size:15px}
+.pdp-meta{
+  margin-top:26px;padding-top:22px;border-top:1px solid var(--line);
+  display:grid;gap:12px;
+}
+.pdp-meta div{display:flex;justify-content:space-between;gap:16px;font-size:13.5px}
+.pdp-meta span:first-child{color:var(--muted);font-family:var(--font-display);font-size:12.5px}
+.pdp-meta span:last-child{font-weight:600;font-family:var(--font-display);font-size:13px}
+
+/* ============ REVEAL ============ */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.22,.9,.3,1),transform .7s cubic-bezier(.22,.9,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1;transform:none}
+}
+
+/* toast */
+.toast{
+  position:fixed;bottom:calc(84px + env(safe-area-inset-bottom));left:50%;transform:translate(-50%,14px);
+  background:var(--ink);color:#FBF6F1;padding:12px 20px;border-radius:999px;
+  font-family:var(--font-display);font-size:13px;font-weight:500;z-index:200;
+  opacity:0;visibility:hidden;transition:opacity .3s,transform .3s,visibility .3s;
+  box-shadow:var(--shadow-lg);white-space:nowrap;
+}
+.toast.on{opacity:1;visibility:visible;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <span data-i18n="top.delivery">گەیاندن بەردەستە لە سلێمانی</span>
+    <span class="dot"></span>
+    <span><b dir="ltr">0770 156 5226</b></span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <div class="nav">
+      <a href="#home" class="logo" aria-label="HOUSEE.BEAUTY">
+        <span class="logo-mark">H</span>
+        <span class="logo-text">
+          <strong>HOUSEE<i>.</i>BEAUTY</strong>
+          <em data-i18n="brand.tagline">ماڵێک لە جوانی</em>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">سەرەتا</a>
+        <a href="#shop" data-i18n="nav.products">بەرهەمەکان</a>
+        <a href="#categories" data-i18n="nav.categories">جۆرەکان</a>
+        <a href="#new" data-i18n="nav.new">نوێکان</a>
+        <a href="#why" data-i18n="nav.about">ئێمە</a>
+        <a href="#location" data-i18n="nav.contact">پەیوەندی</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="lang-btn" id="langBtn" aria-label="Switch language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="width:14px;height:14px">
+            <circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 010 18M12 3a15 15 0 000 18"/>
+          </svg>
+          <span id="langLabel">EN</span>
+        </button>
+        <a class="btn btn-primary btn-sm nav-order" id="navOrder" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.4.5-.6.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.4 8.3-7.9 8.3z"/></svg>
+          <span data-i18n="nav.order">داواکاری</span>
+        </a>
+        <button class="burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div class="drawer" id="drawer">
+  <nav>
+    <a href="#home" data-i18n="nav.home">سەرەتا <span>01</span></a>
+    <a href="#shop" data-i18n="nav.products">بەرهەمەکان <span>02</span></a>
+    <a href="#categories" data-i18n="nav.categories">جۆرەکان <span>03</span></a>
+    <a href="#new" data-i18n="nav.new">نوێکان <span>04</span></a>
+    <a href="#why" data-i18n="nav.about">ئێمە <span>05</span></a>
+    <a href="#location" data-i18n="nav.contact">پەیوەندی <span>06</span></a>
+  </nav>
+  <div class="drawer-contact">
+    <a href="https://wa.me/9647702233960" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+      <span dir="ltr">0770 223 3960</span>
+    </a>
+    <a href="tel:+9647701565226">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 5.5C3 4.1 4.1 3 5.5 3h2.2c.6 0 1.1.4 1.3 1l1 3c.1.5 0 1-.4 1.3l-1.3 1a12 12 0 006.4 6.4l1-1.3c.3-.4.8-.5 1.3-.4l3 1c.6.2 1 .7 1 1.3v2.2c0 1.4-1.1 2.5-2.5 2.5C9.9 20.5 3 13.6 3 5.5z"/></svg>
+      <span data-i18n="drawer.delivery">گەیاندن</span>
+      <span dir="ltr" style="margin-inline-start:auto;color:var(--muted);font-size:13px">0770 156 5226</span>
+    </a>
+    <a href="https://instagram.com/housee.beauty" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      <span dir="ltr">@HOUSEE.BEAUTY</span>
+    </a>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1800&q=80"
+         alt="HOUSEE.BEAUTY" fetchpriority="high" onerror="this.style.display='none'">
+  </div>
+
+  <div class="hero-meta">
+    <span>SULAYMANIYAH · IRAQ</span>
+  </div>
+
+  <div class="hero-inner">
+    <div class="wrap">
+      <span class="hero-eyebrow">
+        <span class="dot"></span>
+        <span data-i18n="hero.eyebrow">سلێمانی · بەرامبەر تاوەری نەورۆز</span>
+      </span>
+      <h1>
+        <span data-i18n="hero.title">ماڵێک لە جوانی</span>
+      </h1>
+      <p data-i18n="hero.sub">هەڵبژاردەیەکی تایبەت لە کەلوپەلی ماڵ و ڕازاندنەوە — بە کوالیتی بەرز، لە سلێمانی.</p>
+      <div class="hero-actions">
+        <a href="#shop" class="btn btn-light">
+          <span data-i18n="hero.cta1">بەرهەمەکان ببینە</span>
+        </a>
+        <a href="#" class="btn btn-outline-light" id="heroOrder" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.4 8.3-7.9 8.3z"/></svg>
+          <span data-i18n="hero.cta2">داواکاری بکە</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="sec" id="categories">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="cat.eyebrow">جۆرەکان</span>
+      <h2 class="sec-title" data-i18n="cat.title">بەپێی جۆر بگەڕێ</h2>
+      <p class="sec-sub" data-i18n="cat.sub">هەموو ئەوەی پێویستتە بۆ ڕازاندنەوەی ماڵەکەت، لە یەک شوێن.</p>
+    </div>
+    <div class="cat-grid rv" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ============ FEATURED ============ -->
+<section class="sec" id="featured" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head-row rv" style="margin-bottom:clamp(26px,5vw,42px)">
+      <div class="sec-head" style="margin-bottom:0">
+        <span class="eyebrow" data-i18n="feat.eyebrow">هەڵبژێردراو</span>
+        <h2 class="sec-title" data-i18n="feat.title">بەرهەمە تایبەتەکان</h2>
+        <p class="sec-sub" data-i18n="feat.sub">هەڵبژاردەیەک لە بەرهەمەکانی فرۆشگاکەمان.</p>
+      </div>
+      <a href="#shop" class="btn btn-ghost btn-sm" data-i18n="feat.all">هەموو ببینە</a>
+    </div>
+    <div class="pgrid rv" id="featGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NEW ARRIVALS ============ -->
+<section class="sec" id="new" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="new.eyebrow">نوێکان</span>
+      <h2 class="sec-title" data-i18n="new.title">نوێ گەیشتووە</h2>
+      <p class="sec-sub" data-i18n="new.sub">دوایین بەرهەمەکان کە زیادکراون بۆ فرۆشگا.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="hscroll rv" id="newScroll"></div>
+    <div class="hscroll-desk rv" id="newGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SHOP ============ -->
+<section class="sec" id="shop" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="shop.eyebrow">فرۆشگا</span>
+      <h2 class="sec-title" data-i18n="shop.title">هەموو بەرهەمەکان</h2>
+    </div>
+
+    <div class="shop-tools rv">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input type="search" id="searchInput" data-i18n-ph="shop.search" placeholder="گەڕان بۆ بەرهەم..." autocomplete="off">
+        <button class="search-clear" id="searchClear" aria-label="clear">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 5l14 14M19 5L5 19"/></svg>
+        </button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+
+    <div class="results-line" id="resultsLine"></div>
+    <div class="pgrid" id="shopGrid"></div>
+    <div id="emptyState"></div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="sec why-sec" id="why">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow" data-i18n="why.eyebrow">ئێمە</span>
+      <h2 class="sec-title" data-i18n="why.title">بۆچی HOUSEE.BEAUTY؟</h2>
+    </div>
+    <div class="why-grid rv" id="whyGrid"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="sec" id="instagram">
+  <div class="wrap">
+    <div class="insta-head rv">
+      <div class="insta-avatar">H</div>
+      <div class="insta-meta">
+        <strong dir="ltr">@HOUSEE.BEAUTY</strong>
+        <span data-i18n="insta.sub">دوایین بەرهەم و نوێکارییەکان لە ئینستاگرام</span>
+      </div>
+      <a href="https://instagram.com/housee.beauty" target="_blank" rel="noopener"
+         class="btn btn-primary btn-sm" style="margin-inline-start:auto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        <span data-i18n="insta.cta">سەردانی ئینستاگرام</span>
+      </a>
+    </div>
+    <div class="insta-grid rv" id="instaGrid"></div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section class="sec" id="location" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow" data-i18n="loc.eyebrow">شوێن</span>
+      <h2 class="sec-title" data-i18n="loc.title">شوێنی فرۆشگا</h2>
+      <p class="sec-sub" data-i18n="loc.sub">سلێمانی، نزیک بازنەی سەوز / بەرامبەر تاوەری نەورۆز</p>
+    </div>
+
+    <div class="loc-grid rv">
+      <div class="loc-card">
+        <div class="loc-item">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s7-5.4 7-11a7 7 0 10-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="loc.addr">ناونیشان</strong>
+            <span data-i18n="loc.addrVal">سلێمانی، نزیک بازنەی سەوز / بەرامبەر تاوەری نەورۆز</span>
+          </div>
+        </div>
+
+        <div class="loc-item">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 5.5C3 4.1 4.1 3 5.5 3h2.2c.6 0 1.1.4 1.3 1l1 3c.1.5 0 1-.4 1.3l-1.3 1a12 12 0 006.4 6.4l1-1.3c.3-.4.8-.5 1.3-.4l3 1c.6.2 1 .7 1 1.3v2.2c0 1.4-1.1 2.5-2.5 2.5C9.9 20.5 3 13.6 3 5.5z"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="loc.phone">ژمارەی پەیوەندی</strong>
+            <a href="tel:+9647702233960">0770 223 3960</a>
+          </div>
+        </div>
+
+        <div class="loc-item">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <div>
+            <strong data-i18n="loc.insta">ئینستاگرام</strong>
+            <a href="https://instagram.com/housee.beauty" target="_blank" rel="noopener">@HOUSEE.BEAUTY</a>
+          </div>
+        </div>
+
+        <a class="btn btn-primary btn-block" style="margin-top:auto"
+           href="https://maps.google.com/?q=35.5570,45.4430" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+          <span data-i18n="loc.btn">کردنەوە لە نەخشەدا</span>
+        </a>
+      </div>
+
+      <div class="map-box">
+        <div class="map-pin"><span class="dot"></span><span data-i18n="loc.pin">سلێمانی · تاوەری نەورۆز</span></div>
+        <iframe
+          src="https://maps.google.com/maps?q=35.5570,45.4430&z=14&hl=ku&output=embed"
+          loading="lazy" title="HOUSEE.BEAUTY Location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY ============ -->
+<section class="sec" id="delivery" style="padding-top:0">
+  <div class="wrap">
+    <div class="delivery rv">
+      <div class="delivery-inner">
+        <div>
+          <span class="eyebrow" data-i18n="del.eyebrow">گەیاندن</span>
+          <h2 data-i18n="del.title">ئێمە گەیاندن دابین دەکەین</h2>
+          <p data-i18n="del.sub">دەتوانیت داواکارییەکەت لە ڕێگەی واتساپ یان پەیوەندی تەلەفۆنییەوە بکەیت، و ئێمە گەیاندن بۆت دابین دەکەین لە سلێمانی. بۆ زانیاری زیاتر دەربارەی گەیاندن و کاتەکان، تکایە پەیوەندیمان پێوە بکە.</p>
+        </div>
+        <div class="del-phone">
+          <small data-i18n="del.phoneLabel">ژمارەی گەیاندن</small>
+          <a class="num" href="tel:+9647701565226">0770 156 5226</a>
+          <a class="btn btn-block" href="tel:+9647701565226">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M3 5.5C3 4.1 4.1 3 5.5 3h2.2c.6 0 1.1.4 1.3 1l1 3c.1.5 0 1-.4 1.3l-1.3 1a12 12 0 006.4 6.4l1-1.3c.3-.4.8-.5 1.3-.4l3 1c.6.2 1 .7 1 1.3v2.2c0 1.4-1.1 2.5-2.5 2.5C9.9 20.5 3 13.6 3 5.5z"/></svg>
+            <span data-i18n="del.btn">پەیوەندی بکە</span>
+          </a>
+          <p class="del-note" data-i18n="del.note">کاتی وردی گەیاندن بەپێی شوێن و بەردەستبوونی بەرهەم دیاری دەکرێت.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-inner rv">
+      <span class="eyebrow" data-i18n="final.eyebrow">داواکاری</span>
+      <h2 data-i18n="final.title">بەرهەمی دڵخوازت بدۆزەرەوە</h2>
+      <p data-i18n="final.sub">پەیوەندیمان پێوە بکە لە ڕێگەی واتساپەوە و ئێمە یارمەتیت دەدەین بۆ هەڵبژاردنی باشترین بەرهەم.</p>
+      <a class="btn btn-primary" id="finalOrder" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.4 8.3-7.9 8.3z"/></svg>
+        <span data-i18n="final.btn">ئێستا داوا بکە</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#home" class="logo">
+          <span class="logo-mark">H</span>
+          <span class="logo-text">
+            <strong>HOUSEE<i>.</i>BEAUTY</strong>
+            <em data-i18n="brand.tagline">ماڵێک لە جوانی</em>
+          </span>
+        </a>
+        <p data-i18n="foot.about">فرۆشگایەکی خۆجێیی لە سلێمانی بۆ کەلوپەلی ماڵ و ڕازاندنەوە. داواکاری بە واتساپ، گەیاندن بەردەستە.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4 data-i18n="foot.links">بەستەرەکان</h4>
+        <a href="#shop" data-i18n="nav.products">بەرهەمەکان</a>
+        <a href="#categories" data-i18n="nav.categories">جۆرەکان</a>
+        <a href="#new" data-i18n="nav.new">نوێکان</a>
+        <a href="#delivery" data-i18n="del.title">گەیاندن</a>
+      </div>
+
+      <div class="foot-col">
+        <h4 data-i18n="foot.contact">پەیوەندی</h4>
+        <a href="tel:+9647702233960" dir="ltr">0770 223 3960</a>
+        <a href="tel:+9647701565226" dir="ltr">0770 156 5226</a>
+        <a href="https://instagram.com/housee.beauty" target="_blank" rel="noopener" dir="ltr">@HOUSEE.BEAUTY</a>
+        <span data-i18n="loc.addrVal">سلێمانی، نزیک بازنەی سەوز / بەرامبەر تاوەری نەورۆز</span>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> HOUSEE.BEAUTY — <span data-i18n="foot.rights">هەموو مافەکان پارێزراون</span></span>
+      <div class="socials">
+        <a href="https://instagram.com/housee.beauty" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="https://wa.me/9647702233960" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FAB ============ -->
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.4 0-4.5 3.7-8.2 8.2-8.2s8.2 3.7 8.2 8.2-3.4 8.3-7.9 8.3z"/></svg>
+  <span data-i18n="fab.order">داواکاری</span>
+</a>
+
+<!-- ============ PDP ============ -->
+<div class="pdp" id="pdp" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="pdp-backdrop" data-close></div>
+  <div class="pdp-sheet">
+    <div class="pdp-close">
+      <button data-close>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <span data-i18n="pdp.back">گەڕانەوە</span>
+      </button>
+    </div>
+    <div class="pdp-body" id="pdpBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =====================================================================
+   HOUSEE.BEAUTY — store logic
+   All content is data-driven so products can be swapped easily.
+   ===================================================================== */
+
+const CONFIG = {
+  whatsapp: '9647702233960',
+  delivery: '9647701565226',
+  instagram: 'https://instagram.com/housee.beauty',
+  currencyKu: 'د.ع',
+  currencyEn: 'IQD'
+};
+
+const img = (id, w = 900) =>
+  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=80`;
+
+/* ---------- CATEGORIES ---------- */
+const CATEGORIES = [
+  { id:'clocks',  ku:'کاتژمێر',          en:'Clocks',      img: img('1563861829056-2a1c5d1d6a2c', 700) },
+  { id:'mirrors', ku:'ئاوێنە',           en:'Mirrors',     img: img('1618220179428-22790b461013', 700) },
+  { id:'decor',   ku:'ڕازاندنەوە',       en:'Decor',       img: img('1513519245088-0e12902e5a38', 700) },
+  { id:'furniture',ku:'کەلوپەلی ماڵ',    en:'Furniture',   img: img('1538688525198-9b88f6f53126', 700) },
+  { id:'lighting',ku:'ڕووناکی',          en:'Lighting',    img: img('1513506003901-1e6a229e2d15', 700) },
+  { id:'gifts',   ku:'سێتی دیاری',      en:'Gift Sets',   img: img('1607083206968-13611e3d76db', 700) }
+];
+
+/* ---------- PRODUCTS ---------- */
+const PRODUCTS = [
+  {
+    id:'hb-01', cat:'clocks', price:85000, old:110000, badge:'bestseller', stock:'in',
+    ku:{ name:'کاتژمێری دیواری ڕۆڵێکس — زێڕین',
+         desc:'کاتژمێرێکی دیواری شیک و مۆدێرن بە دیزاینی ڕۆڵێکس. گونجاوە بۆ ژووری دانیشتن و ئۆفیس. بەردەستە لە فرۆشگاکەمان لە سلێمانی.' },
+    en:{ name:'Rolex Wall Clock — Gold Edition',
+         desc:'A stylish and modern wall clock with Rolex design. Suitable for living rooms and offices. Available at our Sulaymaniyah store.' },
+    images:[ img('1563861829056-2a1c5d1d6a2c'), img('1584346133934-a3afd2a33c4c'), img('1507646482729-36c5cbf7c7c5') ]
+  },
+  {
+    id:'hb-02', cat:'mirrors', price:65000, badge:'new', stock:'in',
+    ku:{ name:'ئاوێنەی گەردەلوول بە ڕووناکی LED',
+         desc:'ئاوێنەیەکی گەردەلوول بە ڕووناکی LED، بۆ مێکیاژ و ڕازاندنەوەی دیوار. دیزاینێکی سادە و مۆدێرن.' },
+    en:{ name:'Round LED Mirror',
+         desc:'A round mirror with LED lighting, perfect for makeup and wall decor. Simple and modern design.' },
+    images:[ img('1618220179428-22790b461013'), img('1618221195710-dd6b41faaea6'), img('1596755094514-f87e34085b2c') ]
+  },
+  {
+    id:'hb-03', cat:'decor', price:45000, stock:'in',
+    ku:{ name:'ڤازی سیرامیک بە دیزاینی مۆدێرن',
+         desc:'ڤازێکی سیرامیک بە ڕەنگی سپی و زێڕین، بۆ ڕازاندنەوەی مێز و ڕەفە.' },
+    en:{ name:'Modern Ceramic Vase',
+         desc:'A ceramic vase in white and gold, perfect for decorating tables and shelves.' },
+    images:[ img('1513519245088-0e12902e5a38'), img('1578500494198-246f612d3b3d'), img('1581783898377-1c85bf937427') ]
+  },
+  {
+    id:'hb-04', cat:'furniture', price:120000, stock:'in',
+    ku:{ name:'ڕەفەی فرشتی چێستەر — ڕەشی مۆدێرن',
+         desc:'ڕەفەیەکی فرشتی بە دیزاینی مۆدێرن، بۆ ڕێکخستنی پێڵاو و کەلوپەلی ماڵ. بەرگی ڕەش و قەبارەی گونجاو.' },
+    en:{ name:'Chester Shoe Rack — Modern Black',
+         desc:'A modern shoe rack for organizing shoes and home items. Black finish and convenient size.' },
+    images:[ img('1538688525198-9b88f6f53126'), img('1594026112284-02bb6f3352fe'), img('1586023492125-27b2c045efd7') ]
+  },
+  {
+    id:'hb-05', cat:'lighting', price:55000, old:70000, stock:'low',
+    ku:{ name:'چرای دیواری زێڕین — دوو ئاراستە',
+         desc:'چرایەکی دیواری بە ڕەنگی زێڕین، بە دوو ئاراستە بۆ ڕووناککردنی ژوور. دیزاینێکی لوکس و مۆدێرن.' },
+    en:{ name:'Gold Wall Lamp — Dual Direction',
+         desc:'A gold wall lamp with dual direction for room lighting. Luxurious and modern design.' },
+    images:[ img('1513506003901-1e6a229e2d15'), img('1540932239986-30128078f3c5'), img('1507473885765-e6ed057f782c') ]
+  },
+  {
+    id:'hb-06', cat:'gifts', price:95000, stock:'in',
+    ku:{ name:'سێتی دیاری — کاتژمێر و ڤاز',
+         desc:'سێتێکی دیاری لە کاتژمێر و ڤازی مۆدێرن، لە پاکەتێکی شیکدا. گونجاو بۆ دیاریکردن.' },
+    en:{ name:'Gift Set — Clock & Vase',
+         desc:'A gift set with a clock and a modern vase in elegant packaging. Perfect for gifting.' },
+    images:[ img('1607083206968-13611e3d76db'), img('1563861829056-2a1c5d1d6a2c'), img('1513519245088-0e12902e5a38') ]
+  },
+  {
+    id:'hb-07', cat:'clocks', price:70000, badge:'new', stock:'in',
+    ku:{ name:'کاتژمێری دیواری سێنتراڵ پارک — کلاسیک',
+         desc:'کاتژمێرێکی دیواری بە دیزاینی کلاسیک و ڕەنگی دار، بۆ ژووری دانیشتن.' },
+    en:{ name:'Central Park Wall Clock — Classic',
+         desc:'A classic wall clock with a wooden finish, perfect for the living room.' },
+    images:[ img('1584346133934-a3afd2a33c4c'), img('1507646482729-36c5cbf7c7c5'), img('1563861829056-2a1c5d1d6a2c') ]
+  },
+  {
+    id:'hb-08', cat:'mirrors', price:85000, stock:'in',
+    ku:{ name:'ئاوێنەی دیواری گەورە — چوارچێوەی زێڕین',
+         desc:'ئاوێنەیەکی دیواری گەورە بە چوارچێوەی زێڕین، بۆ ڕازاندنەوەی هۆڵ و ژووری دانیشتن.' },
+    en:{ name:'Large Wall Mirror — Gold Frame',
+         desc:'A large wall mirror with a gold frame, perfect for hallway and living room decor.' },
+    images:[ img('1618221195710-dd6b41faaea6'), img('1596755094514-f87e34085b2c'), img('1618220179428-22790b461013') ]
+  },
+  {
+    id:'hb-09', cat:'decor', price:35000, stock:'in',
+    ku:{ name:'سینی ڕازاندنەوە — زێڕین و ڕەش',
+         desc:'سینییەکی شیک بۆ ڕازاندنەوەی مێزی دانیشتن، بە ڕەنگی زێڕین و ڕەش.' },
+    en:{ name:'Decorative Tray — Gold & Black',
+         desc:'A stylish tray for decorating your coffee table, in gold and black.' },
+    images:[ img('1581783898377-1c85bf937427'), img('1513519245088-0e12902e5a38'), img('1578500494198-246f612d3b3d') ]
+  },
+  {
+    id:'hb-10', cat:'furniture', price:145000, stock:'in',
+    ku:{ name:'مێزی لای قەنەفە — مۆدێرن',
+         desc:'مێزێکی لای قەنەفە بە دیزاینی مۆدێرن و ڕەنگی دار، بۆ دانانی کەلوپەلی بچووک.' },
+    en:{ name:'Side Table — Modern',
+         desc:'A modern side table with a wooden finish, for placing small items.' },
+    images:[ img('1594026112284-02bb6f3352fe'), img('1586023492125-27b2c045efd7'), img('1538688525198-9b88f6f53126') ]
+  },
+  {
+    id:'hb-11', cat:'lighting', price:48000, stock:'in',
+    ku:{ name:'چرای مێزی — لوکس',
+         desc:'چرایەکی مێزی بە دیزاینی لوکس و ڕووناکی نەرم، بۆ ژووری نوستن.' },
+    en:{ name:'Table Lamp — Luxury',
+         desc:'A luxury table lamp with soft lighting, perfect for the bedroom.' },
+    images:[ img('1540932239986-30128078f3c5'), img('1507473885765-e6ed057f782c'), img('1513506003901-1e6a229e2d15') ]
+  },
+  {
+    id:'hb-12', cat:'gifts', price:110000, old:135000, badge:'sale', stock:'in',
+    ku:{ name:'سێتی دیاری لوکس — کاتژمێر و چرا',
+         desc:'سێتێکی دیاری لوکس لە کاتژمێر و چرا، بۆ دیاریکردن بە کەسانی خۆشەویست.' },
+    en:{ name:'Luxury Gift Set — Clock & Lamp',
+         desc:'A luxury gift set with a clock and a lamp, perfect for gifting to loved ones.' },
+    images:[ img('1607083206968-13611e3d76db'), img('1584346133934-a3afd2a33c4c'), img('1540932239986-30128078f3c5') ]
+  },
+  {
+    id:'hb-13', cat:'decor', price:38000, stock:'in',
+    ku:{ name:'گوڵدانی سیرامیک — سپی',
+         desc:'گوڵدانییەکی سیرامیک بە ڕەنگی سپی، بۆ ڕازاندنەوەی مێز و ڕەفە.' },
+    en:{ name:'Ceramic Planter — White',
+         desc:'A white ceramic planter for decorating tables and shelves.' },
+    images:[ img('1578500494198-246f612d3b3d'), img('1581783898377-1c85bf937427'), img('1513519245088-0e12902e5a38') ]
+  },
+  {
+    id:'hb-14', cat:'mirrors', price:72000, stock:'out',
+    ku:{ name:'ئاوێنەی مێکیاژ — ڕووناکی نەرم',
+         desc:'ئاوێنەیەکی مێکیاژ بە ڕووناکی نەرم، بۆ مێزی مێکیاژەکەت.' },
+    en:{ name:'Makeup Mirror — Soft Light',
+         desc:'A makeup mirror with soft lighting, for your vanity.' },
+    images:[ img('1596755094514-f87e34085b2c'), img('1618220179428-22790b461013'), img('1618221195710-dd6b41faaea6') ]
+  },
+  {
+    id:'hb-15', cat:'clocks', price:60000, stock:'in',
+    ku:{ name:'کاتژمێری دیواری بچووک — مۆدێرن',
+         desc:'کاتژمێرێکی دیواری بچووک بە دیزاینی مۆدێرن، گونجاو بۆ ژووری چێشتخانە.' },
+    en:{ name:'Small Wall Clock — Modern',
+         desc:'A small modern wall clock, perfect for the kitchen.' },
+    images:[ img('1507646482729-36c5cbf7c7c5'), img('1563861829056-2a1c5d1d6a2c'), img('1584346133934-a3afd2a33c4c') ]
+  },
+  {
+    id:'hb-16', cat:'furniture', price:165000, badge:'new', stock:'in',
+    ku:{ name:'ڕەفەی دیواری مۆدێرن — دار',
+         desc:'ڕەفەیەکی دیواری بە دیزاینی مۆدێرن و ڕەنگی دار، بۆ ڕێکخستنی کەلوپەل.' },
+    en:{ name:'Modern Wall Shelf — Wood',
+         desc:'A modern wall shelf with a wooden finish, for organizing items.' },
+    images:[ img('1586023492125-27b2c045efd7'), img('1538688525198-9b88f6f53126'), img('1594026112284-02bb6f3352fe') ]
+  }
+];
+
+/* ---------- WHY ---------- */
+const WHY = [
+  { key:'q', ku:{t:'کوالیتی بەرز', d:'بەرهەمەکان بە وردی هەڵدەبژێردرێن پێش ئەوەی بگەنە فرۆشگاکەمان.'},
+             en:{t:'Quality Products', d:'Every product is carefully selected before it reaches our store.'},
+    icon:'<path d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1 5.6L12 15.6 7.1 18.4l1-5.6L4 8.9l5.6-.7L12 3z"/>' },
+  { key:'d', ku:{t:'گەیاندنی خێرا', d:'گەیاندن بەردەستە لە سلێمانی. پەیوەندی بکە بۆ زانیاری زیاتر.'},
+             en:{t:'Fast Delivery', d:'Delivery is available in Sulaymaniyah. Call us for more details.'},
+    icon:'<path d="M3 7h11v9H3z"/><path d="M14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/>' },
+  { key:'s', ku:{t:'فرۆشگایەکی خۆجێیی', d:'لە سلێمانی، بەرامبەر تاوەری نەورۆز — دەتوانیت سەردانمان بکەیت.'},
+             en:{t:'A Local Store', d:'In Sulaymaniyah, in front of Newroz Tower — you can visit us in person.'},
+    icon:'<path d="M4 9h16v11H4z"/><path d="M3 9l2-5h14l2 5"/><path d="M9 20v-6h6v6"/>' },
+  { key:'o', ku:{t:'داواکاری ئاسان', d:'تەنها بە یەک کلیک لە ڕێگەی واتساپەوە داواکاری بکە.'},
+             en:{t:'Easy Ordering', d:'Order in one click through WhatsApp — no account needed.'},
+    icon:'<path d="M21 12a8 8 0 01-8 8H7l-4 3 1.2-4.4A8 8 0 1121 12z"/>' }
+];
+
+/* ---------- UI STRINGS ---------- */
+const T = {
+  ku: {
+    'top.delivery':'گەیاندن بەردەستە لە سلێمانی',
+    'brand.tagline':'ماڵێک لە جوانی',
+    'nav.home':'سەرەتا','nav.products':'بەرهەمەکان','nav.categories':'جۆرەکان',
+    'nav.new':'نوێکان','nav.about':'ئێمە','nav.contact':'پەیوەندی','nav.order':'داواکاری',
+    'drawer.delivery':'گەیاندن',
+    'hero.eyebrow':'سلێمانی · بەرامبەر تاوەری نەورۆز',
+    'hero.title':'ماڵێک لە جوانی',
+    'hero.sub':'هەڵبژاردەیەکی تایبەت لە کەلوپەلی ماڵ و ڕازاندنەوە — بە کوالیتی بەرز، لە سلێمانی.',
+    'hero.cta1':'بەرهەمەکان ببینە','hero.cta2':'داواکاری بکە',
+    'cat.eyebrow':'جۆرەکان','cat.title':'بەپێی جۆر بگەڕێ',
+    'cat.sub':'هەموو ئەوەی پێویستتە بۆ ڕازاندنەوەی ماڵەکەت، لە یەک شوێن.',
+    'feat.eyebrow':'هەڵبژێردراو','feat.title':'بەرهەمە تایبەتەکان',
+    'feat.sub':'هەڵبژاردەیەک لە بەرهەمەکانی فرۆشگاکەمان.','feat.all':'هەموو ببینە',
+    'new.eyebrow':'نوێکان','new.title':'نوێ گەیشتووە',
+    'new.sub':'دوایین بەرهەمەکان کە زیادکراون بۆ فرۆشگا.',
+    'shop.eyebrow':'فرۆشگا','shop.title':'هەموو بەرهەمەکان',
+    'shop.search':'گەڕان بۆ بەرهەم...','shop.all':'هەموو',
+    'shop.results':'{n} بەرهەم','shop.empty':'هیچ بەرهەمێک نەدۆزرایەوە',
+    'why.eyebrow':'ئێمە','why.title':'بۆچی HOUSEE.BEAUTY؟',
+    'insta.sub':'دوایین بەرهەم و نوێکارییەکان لە ئینستاگرام','insta.cta':'سەردانی ئینستاگرام',
+    'loc.eyebrow':'شوێن','loc.title':'شوێنی فرۆشگا',
+    'loc.sub':'سلێمانی، نزیک بازنەی سەوز / بەرامبەر تاوەری نەورۆز',
+    'loc.addr':'ناونیشان','loc.addrVal':'سلێمانی، نزیک بازنەی سەوز / بەرامبەر تاوەری نەورۆز',
+    'loc.phone':'ژمارەی پەیوەندی','loc.insta':'ئینستاگرام',
+    'loc.btn':'کردنەوە لە نەخشەدا','loc.pin':'سلێمانی · تاوەری نەورۆز',
+    'del.eyebrow':'گەیاندن','del.title':'ئێمە گەیاندن دابین دەکەین',
+    'del.sub':'دەتوانیت داواکارییەکەت لە ڕێگەی واتساپ یان پەیوەندی تەلەفۆنییەوە بکەیت، و ئێمە گەیاندن بۆت دابین دەکەین لە سلێمانی. بۆ زانیاری زیاتر دەربارەی گەیاندن و کاتەکان، تکایە پەیوەندیمان پێوە بکە.',
+    'del.phoneLabel':'ژمارەی گەیاندن','del.btn':'پەیوەندی بکە',
+    'del.note':'کاتی وردی گەیاندن بەپێی شوێن و بەردەستبوونی بەرهەم دیاری دەکرێت.',
+    'final.eyebrow':'داواکاری','final.title':'بەرهەمی دڵخوازت بدۆزەرەوە',
+    'final.sub':'پەیوەندیمان پێوە بکە لە ڕێگەی واتساپەوە و ئێمە یارمەتیت دەدەین بۆ هەڵبژاردنی باشترین بەرهەم.',
+    'final.btn':'ئێستا داوا بکە',
+    'foot.about':'فرۆشگایەکی خۆجێیی لە سلێمانی بۆ کەلوپەلی ماڵ و ڕازاندنەوە. داواکاری بە واتساپ، گەیاندن بەردەستە.',
+    'foot.links':'بەستەرەکان','foot.contact':'پەیوەندی',
+    'foot.rights':'هەموو مافەکان پارێزراون',
+    'fab.order':'داواکاری',
+    'pdp.back':'گەڕانەوە','pdp.order':'داواکردن بە واتساپ','pdp.call':'پەیوەندی',
+    'pdp.cat':'جۆر','pdp.code':'کۆدی بەرهەم','pdp.avail':'بەردەستبوون',
+    'stock.in':'بەردەستە','stock.low':'کەم ماوە','stock.out':'نەماوە',
+    'badge.new':'نوێ','badge.bestseller':'هەڵبژێردراو','badge.sale':'داشکاندن',
+    'order':'داواکردن','order.out':'نەماوە',
+    'toast':'کرایەوە لە واتساپ'
+  },
+  en: {
+    'top.delivery':'Delivery available in Sulaymaniyah',
+    'brand.tagline':'A home of beauty',
+    'nav.home':'Home','nav.products':'Products','nav.categories':'Categories',
+    'nav.new':'New','nav.about':'About','nav.contact':'Contact','nav.order':'Order',
+    'drawer.delivery':'Delivery',
+    'hero.eyebrow':'Sulaymaniyah · In front of Newroz Tower',
+    'hero.title':'A Home of Beauty',
+    'hero.sub':'A curated selection of home goods and decor — high quality, right here in Sulaymaniyah.',
+    'hero.cta1':'Browse Products','hero.cta2':'Order Now',
+    'cat.eyebrow':'Categories','cat.title':'Shop by Category',
+    'cat.sub':'Everything you need for your home, in one place.',
+    'feat.eyebrow':'Featured','feat.title':'Featured Products',
+    'feat.sub':'A selection from our store.','feat.all':'View all',
+    'new.eyebrow':'New','new.title':'New Arrivals',
+    'new.sub':'The latest products added to the store.',
+    'shop.eyebrow':'Shop','shop.title':'All Products',
+    'shop.search':'Search products...','shop.all':'All',
+    'shop.results':'{n} products','shop.empty':'No products found',
+    'why.eyebrow':'About','why.title':'Why HOUSEE.BEAUTY?',
+    'insta.sub':'Latest products and updates on Instagram','insta.cta':'Visit Instagram',
+    'loc.eyebrow':'Location','loc.title':'Store Location',
+    'loc.sub':'Sulaymaniyah, near Green Circle / In front of Newroz Tower',
+    'loc.addr':'Address','loc.addrVal':'Sulaymaniyah, near Green Circle / In front of Newroz Tower',
+    'loc.phone':'Phone','loc.insta':'Instagram',
+    'loc.btn':'Open in Maps','loc.pin':'Sulaymaniyah · Newroz Tower',
+    'del.eyebrow':'Delivery','del.title':'We Offer Delivery',
+    'del.sub':'You can place your order via WhatsApp or by phone, and we will arrange delivery for you in Sulaymaniyah. For more details about delivery and timing, please contact us.',
+    'del.phoneLabel':'Delivery number','del.btn':'Call us',
+    'del.note':'Exact delivery time depends on the location and product availability.',
+    'final.eyebrow':'Order','final.title':'Find Your Favourite Product',
+    'final.sub':'Contact us on WhatsApp and we will help you choose the right product.',
+    'final.btn':'Order Now',
+    'foot.about':'A local store in Sulaymaniyah for home goods and decor. Order via WhatsApp, delivery available.',
+    'foot.links':'Links','foot.contact':'Contact',
+    'foot.rights':'All rights reserved',
+    'fab.order':'Order',
+    'pdp.back':'Back','pdp.order':'Order on WhatsApp','pdp.call':'Call',
+    'pdp.cat':'Category','pdp.code':'Product code','pdp.avail':'Availability',
+    'stock.in':'In stock','stock.low':'Low stock','stock.out':'Out of stock',
+    'badge.new':'New','badge.bestseller':'Featured','badge.sale':'Sale',
+    'order':'Order','order.out':'Sold out',
+    'toast':'Opening WhatsApp'
+  }
+};
+
+/* ---------- STATE ---------- */
+const state = { lang:'ku', cat:'all', query:'' };
+
+const $  = (s, c=document) => c.querySelector(s);
+const $$ = (s, c=document) => [...c.querySelectorAll(s)];
+const t  = k => (T[state.lang][k] ?? k);
+const fmt = n => n.toLocaleString('en-US');
+
+/* ---------- HELPERS ---------- */
+function waLink(product){
+  const name = product ? product[state.lang].name : '';
+  const price = product ? `${fmt(product.price)} ${state.lang==='ku'?CONFIG.currencyKu:CONFIG.currencyEn}` : '';
+  const msg = product
+    ? (state.lang==='ku'
+        ? `سڵاو HOUSEE.BEAUTY 🌿\nدەمەوێت ئەم بەرهەمە داوا بکەم:\n\n${name}\nنرخ: ${price}\n\nسوپاس.`
+        : `Hello HOUSEE.BEAUTY 🌿\nI would like to order:\n\n${name}\nPrice: ${price}\n\nThank you.`)
+    : (state.lang==='ku'
+        ? `سڵاو HOUSEE.BEAUTY 🌿\nدەمەوێت داواکارییەک بکەم.`
+        : `Hello HOUSEE.BEAUTY 🌿\nI would like to place an order.`);
+  return `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
+}
+
+function priceHTML(p){
+  const cur = state.lang==='ku' ? CONFIG.currencyKu : CONFIG.currencyEn;
+  return `<span class="price">${fmt(p.price)} ${cur}</span>` +
+         (p.old ? `<span class="price-old">${fmt(p.old)} ${cur}</span>` : '');
+}
+
+function mediaHTML(src, alt, cls=''){
+  return `<div class="media ${cls}"><img src="${src}" alt="${alt}" loading="lazy"
+    onerror="this.parentNode.classList.add('no-img');this.remove();"></div>`;
+}
+
+function badgeHTML(p){
+  if(!p.badge) return '';
+  return `<span class="badge ${p.badge}">${t('badge.'+p.badge)}</span>`;
+}
+
+function stockHTML(p, floating){
+  const cls = p.stock==='out' ? 'out' : p.stock==='low' ? 'low' : '';
+  return `<span class="stock ${cls}">${t('stock.'+p.stock)}</span>`;
+}
+
+function productCard(p){
+  const cat = CATEGORIES.find(c => c.id === p.cat);
+  const out = p.stock === 'out';
+  return `
+  <article class="pcard">
+    <div style="position:relative">
+      <div class="pcard-badges">${badgeHTML(p)}</div>
+      ${stockHTML(p, true)}
+      <div class="media" data-open="${p.id}" role="button" tabindex="0"
+           aria-label="${p[state.lang].name}">
+        <img src="${p.images[0]}" alt="${p[state.lang].name}" loading="lazy"
+             onerror="this.parentNode.classList.add('no-img');this.remove();">
+      </div>
+    </div>
+    <div class="pcard-body">
+      <span class="pcard-cat">${cat ? cat[state.lang] : ''}</span>
+      <h3 class="pcard-name">${p[state.lang].name}</h3>
+      <div class="price-row">${priceHTML(p)}</div>
+      <button class="btn-order" data-order="${p.id}" ${out?'disabled':''}>
+        ${out ? t('order.out') : t('order')}
+      </button>
+    </div>
+  </article>`;
+}
+
+/* ---------- RENDER: categories ---------- */
+function renderCategories(){
+  $('#catGrid').innerHTML = CATEGORIES.map(c => `
+    <a class="cat" href="#shop" data-cat="${c.id}">
+      <img src="${c.img}" alt="${c[state.lang]}" loading="lazy"
+           onerror="this.style.display='none'">
+      <span class="cat-label">
+        <strong>${c[state.lang]}</strong>
+        <span>${PRODUCTS.filter(p=>p.cat===c.id).length} ${state.lang==='ku'?'بەرهەم':'items'}</span>
+      </span>
+    </a>`).join('');
+}
+
+/* ---------- RENDER: featured / new ---------- */
+function renderFeatured(){
+  const feat = PRODUCTS.filter(p => p.badge === 'bestseller' || p.badge === 'sale')
+                       .concat(PRODUCTS.filter(p => !p.badge))
+                       .slice(0, 8);
+  $('#featGrid').innerHTML = feat.map(productCard).join('');
+}
+
+function renderNew(){
+  const items = PRODUCTS.filter(p => p.badge === 'new')
+                        .concat(PRODUCTS.filter(p => p.badge !== 'new'))
+                        .slice(0, 8);
+  $('#newScroll').innerHTML = items.slice(0,6).map(productCard).join('');
+  $('#newGrid').innerHTML   = items.slice(0,4).map(productCard).join('');
+}
+
+/* ---------- RENDER: shop ---------- */
+function renderChips(){
+  const all = [{id:'all', ku:'هەموو', en:'All'}, ...CATEGORIES];
+  $('#chips').innerHTML = all.map(c => `
+    <button class="chip ${state.cat===c.id?'on':''}" data-chip="${c.id}">${c[state.lang]}</button>
+  `).join('');
+}
+
+function filtered(){
+  const q = state.query.trim().toLowerCase();
+  return PRODUCTS.filter(p => {
+    const okCat = state.cat === 'all' || p.cat === state.cat;
+    if(!okCat) return false;
+    if(!q) return true;
+    return (p.ku.name + ' ' + p.en.name + ' ' + p.ku.desc + ' ' + p.en.desc)
+      .toLowerCase().includes(q);
+  });
+}
+
+function renderShop(){
+  const list = filtered();
+  $('#resultsLine').textContent = t('shop.results').replace('{n}', list.length);
+  const grid = $('#shopGrid');
+  const empty = $('#emptyState');
+
+  if(!list.length){
+    grid.innerHTML = '';
+    empty.innerHTML = `
+      <div class="empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <p>${t('shop.empty')}</p>
+      </div>`;
+  } else {
+    empty.innerHTML = '';
+    grid.innerHTML = list.map(productCard).join('');
+  }
+}
+
+/* ---------- RENDER: why ---------- */
+function renderWhy(){
+  $('#whyGrid').innerHTML = WHY.map(w => `
+    <div class="why-card">
+      <div class="why-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+             stroke-linecap="round" stroke-linejoin="round">${w.icon}</svg>
+      </div>
+      <h3>${w[state.lang].t}</h3>
+      <p>${w[state.lang].d}</p>
+    </div>`).join('');
+}
+
+/* ---------- RENDER: instagram ---------- */
+function renderInsta(){
+  const picks = [
+    PRODUCTS[0].images[0], PRODUCTS[3].images[0], PRODUCTS[1].images[0],
+    PRODUCTS[5].images[0], PRODUCTS[11].images[0], PRODUCTS[6].images[0]
+  ];
+  $('#instaGrid').innerHTML = picks.map((src, i) => `
+    <a class="insta-item" href="${CONFIG.instagram}" target="_blank" rel="noopener">
+      <img src="${src}" alt="HOUSEE.BEAUTY Instagram ${i+1}" loading="lazy"
+           onerror="this.style.display='none'">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>`).join('');
+}
+
+/* ---------- PDP ---------- */
+let pdpIndex = 0;
+let pdpProduct = null;
+
+function openProduct(id){
+  const p = PRODUCTS.find(x => x.id === id);
+  if(!p) return;
+  pdpProduct = p;
+  pdpIndex = 0;
+  renderPDP();
+  const el = $('#pdp');
+  el.classList.add('open');
+  el.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  $('#pdp .pdp-sheet').scrollTop = 0;
+}
+
+function closeProduct(){
+  const el = $('#pdp');
+  el.classList.remove('open');
+  el.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+}
+
+function renderPDP(){
+  const p = pdpProduct; if(!p) return;
+  const cat = CATEGORIES.find(c => c.id === p.cat);
+  const cur = state.lang==='ku' ? CONFIG.currencyKu : CONFIG.currencyEn;
+  const stockCls = p.stock==='out' ? 'out' : p.stock==='low' ? 'low' : '';
+  const out = p.stock === 'out';
+
+  $('#pdpBody').innerHTML = `
+    <div class="pdp-grid">
+      <div class="pdp-gallery">
+        <div class="main">
+          <img id="pdpMain" src="${p.images[pdpIndex]}" alt="${p[state.lang].name}"
+               onerror="this.parentNode.classList.add('no-img');this.remove();">
+        </div>
+        ${p.images.length > 1 ? `
+        <div class="pdp-thumbs">
+          ${p.images.map((src,i)=>`
+            <button class="${i===pdpIndex?'on':''}" data-thumb="${i}" aria-label="image ${i+1}">
+              <img src="${src}" alt="" loading="lazy" onerror="this.remove();">
+            </button>`).join('')}
+        </div>` : ''}
+      </div>
+
+      <div class="pdp-info">
+        <span class="pdp-cat">${cat ? cat[state.lang] : ''}</span>
+        <h1>${p[state.lang].name}</h1>
+
+        <div class="pdp-price">${priceHTML(p)}</div>
+        <div class="pdp-stock ${stockCls}">
+          <span class="dot"></span>${t('stock.'+p.stock)}
+        </div>
+
+        <p class="pdp-desc">${p[state.lang].desc}</p>
+
+        <div class="pdp-actions">
+          ${out ? `
+            <button class="btn btn-ghost btn-block" disabled style="opacity:.5;cursor:not-allowed">
+              ${t('order.out')}
+            </button>` : `
+            <a class="btn btn-primary" href="${waLink(p)}" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.3c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+              ${t('pdp.order')}
+            </a>`}
+          <a class="btn btn-ghost" href="tel:+${CONFIG.whatsapp}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:17px;height:17px"><path d="M3 5.5C3 4.1 4.1 3 5.5 3h2.2c.6 0 1.1.4 1.3 1l1 3c.1.5 0 1-.4 1.3l-1.3 1a12 12 0 006.4 6.4l1-1.3c.3-.4.8-.5 1.3-.4l3 1c.6.2 1 .7 1 1.3v2.2c0 1.4-1.1 2.5-2.5 2.5C9.9 20.5 3 13.6 3 5.5z"/></svg>
+            ${t('pdp.call')}
+          </a>
+        </div>
+
+        <div class="pdp-meta">
+          <div><span>${t('pdp.cat')}</span><span>${cat ? cat[state.lang] : '—'}</span></div>
+          <div><span>${t('pdp.code')}</span><span dir="ltr">${p.id.toUpperCase()}</span></div>
+          <div><span>${t('pdp.avail')}</span><span>${t('stock.'+p.stock)}</span></div>
+          <div><span>${state.lang==='ku'?'نرخ':'Price'}</span><span>${fmt(p.price)} ${cur}</span></div>
+        </div>
+      </div>
+    </div>`;
+
+  $$('#pdpBody [data-thumb]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      pdpIndex = +btn.dataset.thumb;
+      renderPDP();
+    });
+  });
+}
+
+/* ---------- LANGUAGE ---------- */
+function applyLang(){
+  document.documentElement.lang = state.lang;
+  document.documentElement.dir  = state.lang === 'ku' ? 'rtl' : 'ltr';
+  $('#langLabel').textContent = state.lang === 'ku' ? 'EN' : 'KU';
+
+  $$('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if(T[state.lang][k] !== undefined) el.textContent = T[state.lang][k];
+  });
+  $$('[data-i18n-ph]').forEach(el => {
+    const k = el.dataset.i18nPh;
+    if(T[state.lang][k] !== undefined) el.placeholder = T[state.lang][k];
+  });
+
+  // rebuild dynamic content
+  renderCategories();
+  renderFeatured();
+  renderNew();
+  renderChips();
+  renderShop();
+  renderWhy();
+  renderInsta();
+  if(pdpProduct) renderPDP();
+
+  // order links
+  ['#navOrder','#heroOrder','#finalOrder','#fab'].forEach(sel => {
+    const el = $(sel); if(el) el.href = waLink(null);
+  });
+}
+
+/* ---------- EVENTS ---------- */
+function bindEvents(){
+  // header shadow
+  const hdr = $('#hdr');
+  const onScroll = () => hdr.classList.toggle('scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive:true });
+  onScroll();
+
+  // burger / drawer
+  const burger = $('#burger'), drawer = $('#drawer');
+  burger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    burger.classList.toggle('on', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  $$('#drawer nav a').forEach(a => a.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    burger.classList.remove('on');
+    document.body.style.overflow = '';
+  }));
+
+  // language
+  $('#langBtn').addEventListener('click', () => {
+    state.lang = state.lang === 'ku' ? 'en' : 'ku';
+    applyLang();
+  });
+
+  // global click delegation
+  document.addEventListener('click', e => {
+    const openEl = e.target.closest('[data-open]');
+    if(openEl){ openProduct(openEl.dataset.open); return; }
+
+    const orderEl = e.target.closest('[data-order]');
+    if(orderEl && !orderEl.disabled){
+      const p = PRODUCTS.find(x => x.id === orderEl.dataset.order);
+      window.open(waLink(p), '_blank', 'noopener');
+      toast(t('toast'));
+      return;
+    }
+
+    const chip = e.target.closest('[data-chip]');
+    if(chip){
+      state.cat = chip.dataset.chip;
+      renderChips(); renderShop();
+      return;
+    }
+
+    const catCard = e.target.closest('[data-cat]');
+    if(catCard){
+      state.cat = catCard.dataset.cat;
+      renderChips(); renderShop();
+      return;
+    }
+
+    if(e.target.closest('[data-close]')) closeProduct();
+  });
+
+  // keyboard on product media
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape') closeProduct();
+    if((e.key === 'Enter' || e.key === ' ') && e.target.matches('[data-open]')){
+      e.preventDefault();
+      openProduct(e.target.dataset.open);
+    }
+  });
+
+  // search
+  const input = $('#searchInput'), clear = $('#searchClear');
+  input.addEventListener('input', () => {
+    state.query = input.value;
+    clear.classList.toggle('on', !!input.value);
+    renderShop();
+  });
+  clear.addEventListener('click', () => {
+    input.value = ''; state.query = '';
+    clear.classList.remove('on');
+    renderShop(); input.focus();
+  });
+
+  // scroll spy
+  const sections = ['home','shop','categories','new','why','location'];
+  const navA = $$('#navLinks a');
+  const spy = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting){
+        navA.forEach(a => a.classList.toggle('active',
+          a.getAttribute('href') === '#' + en.target.id));
+      }
+    });
+  }, { rootMargin:'-45% 0px -50% 0px' });
+  sections.forEach(id => { const s = document.getElementById(id); if(s) spy.observe(s); });
+
+  // reveal
+  const rv = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if(en.isIntersecting){ en.target.classList.add('in'); rv.unobserve(en.target); }
+    });
+  }, { rootMargin:'0px 0px -8% 0px', threshold:0.06 });
+  $$('.rv').forEach(el => rv.observe(el));
+}
+
+/* ---------- TOAST ---------- */
+let toastTimer;
+function toast(msg){
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('on'), 2200);
+}
+
+/* ---------- INIT ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  $('#year').textContent = new Date().getFullYear();
+  applyLang();
+  bindEvents();
+});
+</script>
+</body>
+</html>
